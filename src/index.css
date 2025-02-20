@@ -1,0 +1,136 @@
+:root {
+  --violet: hsl(263, 55%, 52%);
+  --dark-grayish-blue: hsl(217, 19%, 35%);
+  --very-dark-blackish-blue: hsl(219, 29%, 14%);
+  --white: hsl(0, 0%, 100%);
+  --light-gray: hsl(0, 0%, 81%);
+  --light-grayish-blue: hsl(225, 100%, 94%);
+  /* colors */
+  --soft-blue: #8bacd9;
+  --white: #ffffff;
+  --cyan: #00fff8;
+  --very-dark-blue-mainBG: #0d192c;
+  --very-dark-blue-cardBG: #15263f;
+  --very-dark-blue-line: #2e405a;
+  --ff: "Outfit", serif;
+  /* heading */
+  --fs-heading: 2.2rem;
+  --fw-heading: 600;
+  --lh-heading: 2.77rem;
+
+  /* light */
+  --fs-body: 1.8rem;
+  --lh-body: 2.6rem;
+  --fw-body: 300;
+
+  /* caption / caption bold */
+  --fs-caption: 1.6rem;
+  --fw-caption: 400;
+  --fw-caption-bold: 600;
+  --lh-caption: 2.02rem;
+  line-height: 1.5;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 400;
+  text-rendering: optimizeLegibility;
+  font-synthesis: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  margin: 0;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+html {
+  font-size: 62.5%;
+  letter-spacing: 0px;
+  font-family: var(--ff);
+}

@@ -1,0 +1,72 @@
+.card {
+  position: relative; /* مهم عشان الـ .quote تبقى ضمن حدودها */
+  overflow: hidden;
+  max-width: 50rem;
+  padding: 2.5rem;
+  padding-bottom: 20px;
+  border-radius: 1.25rem;
+  color: #fff;
+  background-color: #7140c2;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
+    rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+  z-index: 0; /* يخلي الخلفية تحت النص والصورة */
+}
+
+.cardDetails {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.cardImage {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+}
+
+.cardName {
+  font-weight: bold;
+  font-size: 1.7rem;
+}
+
+.CardDetailsContainer {
+  margin: 2rem 0;
+}
+
+.cardTitle {
+  margin-top: -2px;
+  opacity: 0.5;
+  font-size: 1.3rem;
+}
+
+.CardDetailsTitle {
+  width: 100%;
+  line-height: 1.25;
+  font-size: 1.9rem;
+  position: relative;
+  z-index: 10; /* يبقى فوق الصورة */
+}
+
+.CardDetailsBody {
+  line-height: 1.5;
+  margin-top: 1.5rem;
+  color: var(--light-gray);
+  font-size: 1.35rem;
+  position: relative;
+  z-index: 10; /* يبقى فوق الصورة */
+}
+
+.quote {
+  position: absolute;
+  bottom: 10px; /* عشان تبقى تحت النص */
+  right: 8rem;
+  top: 0px; /* عشان تبقى فوق النص */
+  width: 125px;
+  opacity: 0.3;
+  z-index: 0; /* يبقى تحت النص لكن فوق الخلفية */
+}
+@media screen and (min-width: 75rem) {
+  .card {
+    max-width: none;
+  }
+}

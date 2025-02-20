@@ -1,0 +1,236 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&display=swap");
+:root {
+  --font-Josefin-Sans: "Josefin Sans", sans-serif;
+  --gradient: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+}
+.background {
+  min-height: 100vh;
+  width: 100%;
+}
+.backgroundL {
+  background-color: hsl(0, 0%, 100%);
+}
+.backgroundD {
+  background-color: #181824;
+}
+.bgImage {
+  background-size: cover; /* تجعل الصورة تغطي العنصر بالكامل */
+  background-position: center; /* تضمن أن الصورة تكون في المنتصف */
+  background-repeat: no-repeat; /* تمنع تكرار الصورة */
+  height: 350px; /* ارتفاع العنصر */
+}
+.bgImageL {
+  background-image: url("../../../assets/bg-desktop-light.jpg");
+}
+.bgImageD {
+  background-image: url("../../../assets/bg-desktop-dark.jpg"); /* مسار الصورة */
+}
+
+.checkMark {
+  width: 100%;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: var(--gradient);
+  border-radius: 100%;
+  background-size: contain;
+}
+/* 🌄 الوضع الفاتح */
+.light {
+  color: black;
+}
+
+/* 🌙 الوضع الداكن */
+.dark {
+  color: white;
+}
+/* 📦 التصميم العام */
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  font-family: "Josefin Sans", sans-serif;
+  transition: background 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+
+/* 🌟 زر تغيير الوضع */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 400px;
+  margin-bottom: 10px;
+  margin-top: 55px;
+}
+
+.themeToggle {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.themeToggle:hover {
+  transform: scale(1.1);
+}
+
+/* 🏷 العنوان */
+.title {
+  font-size: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+/* 📜 صندوق المهام */
+.todoWrapper {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
+  width: 400px;
+  transition: background 0.3s ease-in-out;
+}
+.todoAdd {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  width: 400px;
+  transition: background 0.3s ease-in-out;
+  margin-bottom: 10px;
+}
+
+.dark .todoWrapper {
+  background: #2c3e50;
+}
+
+/* ✏️ مربع الإدخال */
+.input {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-bottom: 2px solid #ddd;
+  font-size: 16px;
+  outline: none;
+}
+
+.dark .input {
+  background: #34495e;
+  color: white;
+  border-bottom: 2px solid #777;
+}
+
+/* 📌 قائمة المهام */
+.taskList {
+  list-style: none;
+  padding: 0;
+  margin: 15px 0;
+}
+
+/* 📄 كل مهمة */
+.taskItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+  cursor: grab;
+  transition: background 0.3s ease-in-out;
+}
+
+.dark .taskItem {
+  border-bottom: 1px solid #555;
+}
+
+.taskItem:hover {
+  background: #f9f9f9;
+}
+
+.dark .taskItem:hover {
+  background: #3b4b58;
+}
+
+/* ✅ المهمة المكتملة */
+.completed {
+  text-decoration: line-through;
+  color: gray;
+}
+
+/* 🔲 الدائرة الفارغة */
+.checkbox {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ddd;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+}
+
+.dark .checkbox {
+  border-color: #888;
+}
+
+/* ⚡️ الفلترات */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 15px;
+  font-size: 14px;
+}
+
+.dark .footer {
+  color: lightgray;
+}
+
+.filters button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  margin: 0 5px;
+  color: gray;
+}
+
+.dark .filters button {
+  color: lightgray;
+}
+
+.clear {
+  border: none;
+  background: none;
+  color: red;
+  cursor: pointer;
+}
+
+.dark .clear {
+  color: #e74c3c;
+}
+@media (max-width: 768px) {
+  .bgImage {
+    background-size: cover; /* تجعل الصورة تغطي العنصر بالكامل */
+    background-position: center; /* تضمن أن الصورة تكون في المنتصف */
+    background-repeat: no-repeat; /* تمنع تكرار الصورة */
+    height: 200px; /* ارتفاع العنصر */
+  }
+  .bgImageL {
+    background-image: url("../../../assets/bg-mobile-light.jpg");
+  }
+  .bgImageD {
+    background-image: url("../../../assets/bg-mobile-dark.jpg"); /* مسار الصورة */
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    font-family: "Josefin Sans", sans-serif;
+    transition: background 0.5s ease-in-out, color 0.5s ease-in-out;
+    max-height: 100%;
+    max-width: 100%;
+  }
+}

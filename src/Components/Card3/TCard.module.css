@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;700&display=swap");
+:root {
+  --font-red-hat: "Red Hat Display", sans-serif;
+  --Very-pale-blue: hsl(225, 100%, 98%);
+  --Destructed-card-blue: hsl(224, 23%, 55%);
+  --Dark-card-blue: hsl(223, 47%, 23%);
+}
+body {
+  background-color: #e0e8ff;
+}
+.bgImage {
+  background-image: url("../../../assets/pattern-background-desktop.svg"); /* مسار الصورة */
+  background-size: contain; /* تجعل الصورة تغطي العنصر بالكامل */
+  background-position: center; /* تضمن أن الصورة تكون في المنتصف */
+  background-repeat: repeat-x; /* تمنع تكرار الصورة */
+  width: 100%;
+  height: 300px; /* ارتفاع العنصر */
+  background-color: #e0e8ff;
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100dvh;
+  width: 100%;
+}
+
+.article {
+  background-color: #ffffff;
+  box-shadow: 0 2.5rem 5rem 1px hsla(0, 0%, 0%, 9.53%);
+  border-radius: 1.5rem;
+  max-width: 35rem;
+  overflow: hidden;
+}
+
+.img {
+  width: 100%;
+  object-fit: cover;
+}
+.cardEdges {
+  padding: 37px;
+}
+.cardDetails {
+  font-family: var(--font-red-hat);
+  color: var(--Dark-card-blue);
+  font-size: 22px;
+  font-weight: 900;
+  text-align: center;
+}
+.description {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.4;
+  color: gray; /* لون يشبه لون الـ placeholder */
+  opacity: 0.6; /* يجعل اللون أفتح */
+  margin-top: 20px;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  background-color: #f8f9fe; /* رمادي فاتح */
+  border-radius: 10px;
+  padding: 22px;
+  gap: 15px;
+  margin-top: 16px;
+}
+
+.details {
+  flex-grow: 1;
+}
+
+.plan {
+  font-weight: 900;
+  margin: 0;
+}
+
+.price {
+  color: gray;
+  font-size: 12px;
+  margin: 5px 0 0;
+}
+
+.change {
+  color: #6c63ff;
+  font-weight: 900;
+  text-decoration: underline;
+}
+
+.change:hover {
+  text-decoration: none;
+}
+.btn {
+  font-size: 12px;
+  font-weight: 900;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  font-family: var(--font-red-hat);
+  background-color: #382ae1;
+  color: #ffffff;
+  border: none;
+  padding: 14px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 16px;
+  box-shadow: rgb(220, 217, 248) 0px 20px 25px -5px,
+    rgb(220, 217, 248) 0px 10px 50px -5px;
+}
+.btn:hover {
+  background-color: #766cf1;
+}
+.btnC {
+  color: #757e97;
+  font-family: var(--font-red-hat);
+  font-size: 12px;
+  font-weight: 900;
+  text-align: center;
+  margin-top: 26px;
+}
+.btnC:hover {
+  color: #000000;
+}
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px;
+  width: 4rem;
+}
+
+@media (max-width: 768px) {
+  .bgImage {
+    background-image: url("/images/mobile-background.jpg");
+  }
+}
