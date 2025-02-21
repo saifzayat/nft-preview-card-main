@@ -2,8 +2,30 @@ import { useState, useEffect } from "react";
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
 import styles from "./FFCard.module.css";
 import yas from "../../../assets/icon-check.svg";
+import no from "../../../assets/icon-cross.svg";
+import sun from "../../../assets/icon-sun.svg";
+import moon from "../../../assets/icon-moon.svg";
 
 export default function FFCard() {
+  // Checkbox
+
+  const CustomCheckbox = ({ id, label, checked, onChange }) => {
+    return (
+      <div className={styles.checkboxContainer}>
+        <input
+          type="checkbox"
+          id={id}
+          className={styles.customCheckbox}
+          checked={checked}
+          onChange={onChange}
+          src={yas}
+        />
+        <label htmlFor={id} className={styles.checkboxLabel}>
+          {label}
+        </label>
+      </div>
+    );
+  };
   //dark mode
   const [darkMode, setDarkMode] = useState(() => {
     return localStorage.getItem("theme") === "dark";
@@ -34,6 +56,7 @@ export default function FFCard() {
     setTasks(updatedTasks);
     localStorage.setItem("tasks", JSON.stringify(updatedTasks)); // تحديث Local Storage مباشرة
     setTaskInput(""); // تصفير الإدخال بعد الإضافة
+    console.log(updatedTasks);
   };
 
   // حذف المهمة عند الضغط على ❌
@@ -59,12 +82,20 @@ export default function FFCard() {
           }`}
         >
           <div className={styles.header}>
-            <h1 className={styles.title}>TODO</h1>
+            <h1 className={styles.title}>T O D O</h1>
             <button
               onClick={() => setDarkMode(!darkMode)}
               className={styles.themeToggle}
             >
-              {darkMode ? "🌞" : "🌙"}
+              {darkMode ? (
+                <span>
+                  <img src={sun} />
+                </span>
+              ) : (
+                <span>
+                  <img src={moon} />
+                </span>
+              )}
             </button>
           </div>
 
@@ -80,41 +111,39 @@ export default function FFCard() {
           </div>
           {/* if no tasks don't show todoWrapper */}
           <div className={styles.todoWrapper}>
-            <DragDropContext>
-              <ul className={styles.taskList}>
-                {tasks.map((task) => (
-                  <li
-                    key={task.id}
-                    className={`${styles.taskItem} ${
-                      task.completed ? styles.completed : ""
-                    }`}
-                  >
-                    <span className={styles.checkbox}>
-                      {task.completed && (
-                        <span className={styles.checkMark}>
-                          <img src={yas} />
-                        </span>
-                      )}
+            <ul className={styles.taskList}>
+              {tasks.map((task) => (
+                <li
+                  key={task.id}
+                  className={`${styles.taskItem} ${
+                    task.completed ? styles.completed : ""
+                  }`}
+                >
+                  <CustomCheckbox
+                    id={`${task.id}-checkbox`}
+                    checked={task.completed}
+                    onChange={() => {
+                      const updatedTasks = tasks.map((t) =>
+                        t.id === task.id ? { ...t, completed: !t.completed } : t
+                      );
+                      setTasks(updatedTasks);
+                    }}
+                  />
+                  <div className={styles.content}>
+                    <span
+                      className={`${""} ${
+                        task.completed ? styles.completedText : ""
+                      }`}
+                    >
+                      {task.text}
                     </span>
-                    <div className={styles.content}>
-                      <span
-                        className={`${""} ${
-                          task.completed ? styles.completedText : ""
-                        }`}
-                      >
-                        {task.text}
-                      </span>
-                      <span
-                        className={styles.delete}
-                        onClick={() => deleteTask(task.id)}
-                      >
-                        ✖
-                      </span>
-                    </div>
-                  </li>
-                ))}
-              </ul>
-            </DragDropContext>
+                    <span onClick={() => deleteTask(task.id)}>
+                      <img src={no} className={styles.delete} />
+                    </span>
+                  </div>
+                </li>
+              ))}
+            </ul>
             <div className={styles.footer}>
               <span>{tasks.length} items left</span>
               <div className={styles.filters}>
