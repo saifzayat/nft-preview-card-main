@@ -1,41 +1,47 @@
 import { useState, useEffect } from "react";
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
 import styles from "./FFCard.module.css";
+import yas from "../../../assets/icon-check.svg";
 
 export default function FFCard() {
-  const [tasks, setTasks] = useState([
-    { id: "1", text: "Complete online JavaScript course", completed: true },
-    { id: "2", text: "Jog around the park 3x", completed: false },
-    { id: "3", text: "10 minutes meditation", completed: false },
-  ]);
-
+  //dark mode
   const [darkMode, setDarkMode] = useState(() => {
     return localStorage.getItem("theme") === "dark";
   });
 
+  const [tasks, setTasks] = useState(() => {
+    // تحميل المهام من Local Storage عند فتح الصفحة
+    const storedTasks = localStorage.getItem("tasks");
+    return storedTasks ? JSON.parse(storedTasks) : [];
+  });
+
+  const [taskInput, setTaskInput] = useState("");
+
+  // تحديث Local Storage عند كل تعديل على المهام
   useEffect(() => {
-    document.body.className = darkMode ? styles.dark : styles.light;
-    localStorage.setItem("theme", darkMode ? "dark" : "light");
-  }, [darkMode]);
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+  }, [tasks]);
 
-  const toggleTask = (id) => {
-    setTasks((prev) =>
-      prev.map((task) =>
-        task.id === id ? { ...task, completed: !task.completed } : task
-      )
-    );
+  // إضافة مهمة جديدة
+  const addTask = () => {
+    if (taskInput.trim() === "") return;
+    const newTask = {
+      id: Date.now().toString(),
+      text: taskInput,
+      completed: false,
+    };
+    const updatedTasks = [...tasks, newTask];
+    setTasks(updatedTasks);
+    localStorage.setItem("tasks", JSON.stringify(updatedTasks)); // تحديث Local Storage مباشرة
+    setTaskInput(""); // تصفير الإدخال بعد الإضافة
   };
 
-  const onDragEnd = (result) => {
-    if (!result.destination) return;
-
-    const newTasks = Array.from(tasks);
-    const [movedTask] = newTasks.splice(result.source.index, 1);
-    newTasks.splice(result.destination.index, 0, movedTask);
-
-    setTasks(newTasks);
+  // حذف المهمة عند الضغط على ❌
+  const deleteTask = (id) => {
+    const updatedTasks = tasks.filter((task) => task.id !== id);
+    setTasks(updatedTasks);
+    localStorage.setItem("tasks", JSON.stringify(updatedTasks)); // تحديث Local Storage مباشرة
   };
-
   return (
     <div
       className={`${styles.background} ${
@@ -67,49 +73,47 @@ export default function FFCard() {
               type="text"
               placeholder="Create a new todo..."
               className={styles.input}
+              value={taskInput}
+              onChange={(e) => setTaskInput(e.target.value)}
+              onKeyDown={(e) => e.key === "Enter" && addTask()}
             />
           </div>
+          {/* if no tasks don't show todoWrapper */}
           <div className={styles.todoWrapper}>
-            <br></br>
-            <DragDropContext onDragEnd={onDragEnd}>
-              <Droppable droppableId="tasks">
-                {(provided) => (
-                  <ul
-                    className={styles.taskList}
-                    {...provided.droppableProps}
-                    ref={provided.innerRef}
+            <DragDropContext>
+              <ul className={styles.taskList}>
+                {tasks.map((task) => (
+                  <li
+                    key={task.id}
+                    className={`${styles.taskItem} ${
+                      task.completed ? styles.completed : ""
+                    }`}
                   >
-                    {tasks.map((task, index) => (
-                      <Draggable
-                        key={task.id}
-                        draggableId={task.id}
-                        index={index}
+                    <span className={styles.checkbox}>
+                      {task.completed && (
+                        <span className={styles.checkMark}>
+                          <img src={yas} />
+                        </span>
+                      )}
+                    </span>
+                    <div className={styles.content}>
+                      <span
+                        className={`${""} ${
+                          task.completed ? styles.completedText : ""
+                        }`}
                       >
-                        {(provided) => (
-                          <li
-                            ref={provided.innerRef}
-                            {...provided.draggableProps}
-                            {...provided.dragHandleProps}
-                            className={`${styles.taskItem} ${
-                              task.completed ? styles.completed : ""
-                            }`}
-                            onClick={() => toggleTask(task.id)}
-                          >
-                            <span className={styles.checkbox}>
-                              {task.completed && (
-                                <span className={styles.checkmark}>✔</span>
-                              )}
-                            </span>
-                            {task.text}
-                            <span className={styles.delete}>✖</span>
-                          </li>
-                        )}
-                      </Draggable>
-                    ))}
-                    {provided.placeholder}
-                  </ul>
-                )}
-              </Droppable>
+                        {task.text}
+                      </span>
+                      <span
+                        className={styles.delete}
+                        onClick={() => deleteTask(task.id)}
+                      >
+                        ✖
+                      </span>
+                    </div>
+                  </li>
+                ))}
+              </ul>
             </DragDropContext>
             <div className={styles.footer}>
               <span>{tasks.length} items left</span>
