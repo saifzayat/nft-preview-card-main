@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
 import styles from "./FFCard.module.css";
 import yas from "../../../assets/icon-check.svg";
 import no from "../../../assets/icon-cross.svg";

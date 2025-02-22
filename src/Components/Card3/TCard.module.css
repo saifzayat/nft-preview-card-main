@@ -5,9 +5,7 @@
   --Destructed-card-blue: hsl(224, 23%, 55%);
   --Dark-card-blue: hsl(223, 47%, 23%);
 }
-body {
-  background-color: #e0e8ff;
-}
+
 .bgImage {
   background-image: url("../../../assets/pattern-background-desktop.svg"); /* مسار الصورة */
   background-size: contain; /* تجعل الصورة تغطي العنصر بالكامل */
@@ -17,7 +15,12 @@ body {
   height: 300px; /* ارتفاع العنصر */
   background-color: #e0e8ff;
 }
-
+.background {
+  height: 100vh;
+  width: 100%;
+  overflow: auto;
+  background-color: #e0e8ff;
+}
 .main {
   display: flex;
   align-items: center;
@@ -133,6 +136,10 @@ body {
 
 @media (max-width: 768px) {
   .bgImage {
-    background-image: url("/images/mobile-background.jpg");
+    background-image: url("../../../assets/pattern-background-mobile.svg");
+    background-size: contain; /* تجعل الصورة تغطي العنصر بالكامل */
+    background-position: center; /* تضمن أن الصورة تكون في المنتصف */
+    background-repeat: repeat-x; /* تمنع تكرار الصورة */
+    height: 200px;
   }
 }
