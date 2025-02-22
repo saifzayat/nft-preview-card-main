@@ -7,8 +7,10 @@ import sun from "../../../assets/icon-sun.svg";
 import moon from "../../../assets/icon-moon.svg";
 
 export default function FFCard() {
-  // Checkbox
+  // ✅ تعريف الفلتر
+  const [filter, setFilter] = useState("all");
 
+  // Checkbox
   const CustomCheckbox = ({ id, label, checked, onChange }) => {
     return (
       <div className={styles.checkboxContainer}>
@@ -31,8 +33,8 @@ export default function FFCard() {
     return localStorage.getItem("theme") === "dark";
   });
 
+  // تحميل المهام من Local Storage عند فتح الصفحة
   const [tasks, setTasks] = useState(() => {
-    // تحميل المهام من Local Storage عند فتح الصفحة
     const storedTasks = localStorage.getItem("tasks");
     return storedTasks ? JSON.parse(storedTasks) : [];
   });
@@ -43,7 +45,12 @@ export default function FFCard() {
   useEffect(() => {
     localStorage.setItem("tasks", JSON.stringify(tasks));
   }, [tasks]);
-
+  // ✅ تصفية المهام بناءً على الفلتر المحدد
+  const filteredTasks = tasks.filter((task) => {
+    if (filter === "active") return !task.completed;
+    if (filter === "completed") return task.completed;
+    return true;
+  });
   // إضافة مهمة جديدة
   const addTask = () => {
     if (taskInput.trim() === "") return;
@@ -112,7 +119,7 @@ export default function FFCard() {
           {/* if no tasks don't show todoWrapper */}
           <div className={styles.todoWrapper}>
             <ul className={styles.taskList}>
-              {tasks.map((task) => (
+              {filteredTasks.map((task) => (
                 <li
                   key={task.id}
                   className={`${styles.taskItem} ${
@@ -145,13 +152,36 @@ export default function FFCard() {
               ))}
             </ul>
             <div className={styles.footer}>
-              <span>{tasks.length} items left</span>
+              <span>
+                {tasks.filter((task) => !task.completed).length} items left
+              </span>
               <div className={styles.filters}>
-                <button className={styles.active}>All</button>
-                <button>Active</button>
-                <button>Completed</button>
+                <button
+                  className={`${filter === "all" ? styles.activeFilter : ""}`}
+                  onClick={() => setFilter("all")}
+                >
+                  All
+                </button>
+                <button
+                  className={`${
+                    filter === "active" ? styles.activeFilter : ""
+                  }`}
+                  onClick={() => setFilter("active")}
+                >
+                  Active
+                </button>
+                <button
+                  className={`${
+                    filter === "completed" ? styles.activeFilter : ""
+                  }`}
+                  onClick={() => setFilter("completed")}
+                >
+                  Completed
+                </button>
               </div>
-              <button className={styles.clear}>Clear Completed</button>
+              <button className={styles.clear} onClick={() => setTasks([])}>
+                Clear Completed
+              </button>
             </div>
           </div>
         </div>
