@@ -5,6 +5,7 @@
   height: 100dvh;
   width: 100%;
   background-color: var(--very-dark-blue-mainBG);
+  overflow: auto;
 }
 
 .article {
