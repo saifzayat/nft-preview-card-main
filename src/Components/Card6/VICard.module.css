@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+:root {
+  --Poppins: "Poppins", sans-serif;
+}
+.background {
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  overflow: auto;
+  background-color: #edfbfe;
+  background-image: url("../../../assets/bg-hero-desktop.svg");
+  z-index: -1;
+}
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  font-family: var(--Poppins);
+  gap: 60px;
+  padding: 48px 80px 0px 80px;
+}
+.logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.log {
+  display: flex;
+  align-items: center;
+  width: 200px;
+  height: 30px;
+}
+.thing {
+  display: flex;
+  width: 700px;
+  height: 500px;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.btn {
+  display: flex;
+  width: 200px;
+  height: 48px;
+  border-radius: 50px;
+  border: none;
+  background-color: #ffffff;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--Poppins);
+  font-size: 16px;
+  font-weight: 500;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
+}
+.con {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 70px;
+}
+.cont {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 36px;
+}
+.h1 {
+  text-align: start;
+  font-family: var(--Poppins);
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 1.5;
+  margin: 0;
+  color: #042831;
+}
+.p {
+  text-align: start;
+  font-family: var(--Poppins);
+  font-size: 16.5px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #0e252b;
+}
+.btn2 {
+  display: flex;
+  width: 280px;
+  height: 56px;
+  border-radius: 50px;
+  border: none;
+  background-color: #ff52bf;
+  color: #ffffff;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--Poppins);
+  font-size: 14px;
+  font-weight: 500;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
+}
+@media (max-width: 768px) {
+  .background {
+    background-image: url("../../../assets/bg-hero-mobile.svg");
+  }
+}

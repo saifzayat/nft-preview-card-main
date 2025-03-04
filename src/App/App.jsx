@@ -6,6 +6,7 @@ import IICard from "../Components/Card2/IICard";
 import IIICard from "../Components/Card3/IIICard";
 import IVCard from "../Components/Card4/IVCard";
 import VCard from "../Components/Card5/VCard";
+import VICard from "../Components/Card6/VICard";
 function App() {
   return (
     <BrowserRouter>
@@ -16,6 +17,7 @@ function App() {
         <Route path="card3" element={<IIICard />} />
         <Route path="card4" element={<IVCard />} />
         <Route path="card5" element={<VCard />} />
+        <Route path="card6" element={<VICard />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
     </BrowserRouter>
