@@ -1,7 +1,7 @@
-import "./FCard.css";
+import "./ICard.css";
 import TestimonialCard from "./components/TestimonialCard.jsx";
 import { USER_DATA } from "../../../DATA.js";
-const App = () => {
+const ICard = () => {
   return (
     <div className="background">
       <div className="wrapper">
@@ -31,4 +31,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default ICard;

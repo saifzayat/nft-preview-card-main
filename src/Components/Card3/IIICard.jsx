@@ -1,8 +1,8 @@
-import styles from "./TCard.module.css";
+import styles from "./IIICard.module.css";
 import illustration from "../../../assets/illustration-hero.svg";
 import iconMusic from "../../../assets/icon-music.svg";
 
-function TCard() {
+function IIICard() {
   return (
     <div className={styles.background}>
       <div className={styles.bgImage}>
@@ -44,4 +44,4 @@ function TCard() {
   );
 }
 
-export default TCard;
+export default IIICard;

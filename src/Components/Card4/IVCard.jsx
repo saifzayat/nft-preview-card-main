@@ -1,15 +1,16 @@
 import { useState, useEffect } from "react";
-import styles from "./FFCard.module.css";
+import styles from "./IVCard.module.css";
 import yas from "../../../assets/icon-check.svg";
 import no from "../../../assets/icon-cross.svg";
 import sun from "../../../assets/icon-sun.svg";
 import moon from "../../../assets/icon-moon.svg";
 
-export default function FFCard() {
+export default function IVCard() {
   // ✅ تعريف الفلتر
   const [filter, setFilter] = useState("all");
 
   // Checkbox
+  // eslint-disable-next-line react/prop-types
   const CustomCheckbox = ({ id, label, checked, onChange }) => {
     return (
       <div className={styles.checkboxContainer}>

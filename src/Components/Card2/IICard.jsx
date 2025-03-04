@@ -1,10 +1,10 @@
-import styles from "./SCard.module.css";
+import styles from "./IICard.module.css";
 import ethImg from "../../../assets/image-equilibrium.jpg";
 import ethIcon from "../../../assets/icon-ethereum.svg";
 import clockIcon from "../../../assets/icon-clock.svg";
 import avatar from "../../../assets/image-avatar.png";
 
-function Card() {
+function IICard() {
   return (
     <main className={styles.main}>
       <article className={styles.article}>
@@ -52,4 +52,4 @@ function Card() {
   );
 }
 
-export default Card;
+export default IICard;
