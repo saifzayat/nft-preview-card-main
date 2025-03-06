@@ -78,34 +78,40 @@ function VICard() {
         </div>
       </div>
       <footer className={styles.footer}>
-        <div>
-          <img src={log} alt="logo" className={styles.log2} />
-          <div className={styles.det}>
-            <img src={locIcon} alt="location icon" className={styles.icon} />
-            <p className={styles}>
-              Lorem ipsum dolor sit amet, onsectetur adipiscing elit, sed do
-              iusmod tempor incididunt ut labore et olore magna aliqua
-            </p>
+        <img src={log} alt="logo" className={styles.log2} />
+        <div className={styles.details}>
+          <div className={styles.group}>
+            <div className={styles.det}>
+              <img src={locIcon} alt="location icon" className={styles.icon} />
+              <p className={styles}>
+                Lorem ipsum dolor sit amet, onsectetur adipiscing elit, sed do
+                iusmod tempor incididunt ut labore et olore magna aliqua
+              </p>
+            </div>
+            <div className={styles.det}>
+              <img src={phoneIcon} alt="phone icon" className={styles.icon} />
+              <p className={styles}>+1-543-123-4567</p>
+            </div>
+            <div className={styles.det}>
+              <img src={emailIcon} alt="email icon" className={styles.icon} />
+              <p className={styles}>example.com@G.com</p>
+            </div>
           </div>
-          <div className={styles.det}>
-            <img src={phoneIcon} alt="phone icon" className={styles.icon} />
-            <p className={styles}>+1-543-123-4567</p>
+          <div className={styles.group}>
+            <h1 className={styles.stat}>About Us</h1>
+            <h1 className={styles.stat}>What We Do</h1>
+            <h1 className={styles.stat}>FAQ</h1>
           </div>
-          <div className={styles.det}>
-            <img src={emailIcon} alt="email icon" className={styles.icon} />
-            <p className={styles}>example.com@G.com</p>
+          <div className={styles.group}>
+            <h1 className={styles.stat}>Career</h1>
+            <h1 className={styles.stat}>Blog</h1>
+            <h1 className={styles.stat}>Contact Us</h1>
           </div>
-        </div>
-        <h1 className={styles.stat}>About Us</h1>
-        <h1 className={styles.stat}>What We Do</h1>
-        <h1 className={styles.stat}>FAQ</h1>
-        <h1 className={styles.stat}>Career</h1>
-        <h1 className={styles.stat}>Blog</h1>
-        <h1 className={styles.stat}>Contact Us</h1>
-        <div className={styles.icons}>
-          <FontAwesomeIcon className={styles.iconS} icon={faFacebook} />
-          <FontAwesomeIcon className={styles.iconS} icon={faTwitter} />
-          <FontAwesomeIcon className={styles.iconS} icon={faInstagram} />
+          <div className={styles.icons}>
+            <FontAwesomeIcon className={styles.iconS} icon={faFacebook} />
+            <FontAwesomeIcon className={styles.iconS} icon={faTwitter} />
+            <FontAwesomeIcon className={styles.iconS} icon={faInstagram} />
+          </div>
         </div>
         <p className={styles.copyright}>
           {`Copyright ${new Date().getFullYear()} Huddle. All rights reserved.`}
