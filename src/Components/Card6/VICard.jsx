@@ -48,7 +48,7 @@ function VICard() {
                 </p>
               </div>
             </div>
-            <div className={styles.CC}>
+            <div className={styles.CCR}>
               <img src={pic2} alt="pic2" className={styles.pic} />
               <div className={styles.CCC}>
                 <h1 className={styles.hc}>Flowing Conversations</h1>

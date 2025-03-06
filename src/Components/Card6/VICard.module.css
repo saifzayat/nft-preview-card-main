@@ -177,6 +177,19 @@
   padding: 58px;
   font-size: 16px;
 }
+.CCR {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  max-width: 1232px;
+  max-height: 440px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 16px;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
+  padding: 50px;
+  gap: 40px;
+}
 .hc {
   font-size: 30px;
   font-weight: 700;
@@ -356,6 +369,20 @@
     padding: 50px;
     gap: 40px;
   }
+  .CCR {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 335px;
+    height: 488px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 16px;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
+    padding: 50px;
+    gap: 40px;
+  }
+
   .CCC {
     display: flex;
     flex-direction: column;
