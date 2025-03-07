@@ -23,6 +23,9 @@ const NavigationPage = () => {
           <li>
             <Link to="/card6">Go to card 6</Link>
           </li>
+          <li>
+            <Link to="/card7">Go to card 7</Link>
+          </li>
         </ul>
       </nav>
     </div>

@@ -58,6 +58,10 @@
   font-weight: 700;
   box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
 }
+.btn:hover {
+  cursor: pointer;
+  color: #828b92;
+}
 .con {
   display: flex;
   flex-direction: column;
@@ -110,6 +114,10 @@
   font-weight: 500;
   box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
 }
+.btn2:hover {
+  cursor: pointer;
+  background-color: #ff9bdb;
+}
 .footer {
   display: flex;
   gap: 28px;
@@ -120,6 +128,7 @@
   font-family: var(--Open-Sans);
   font-size: 10px;
   font-weight: 200;
+  position: relative;
 }
 .details {
   display: flex;
@@ -215,10 +224,12 @@
   box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
   padding: 34px;
   gap: 40px;
+  width: 800px;
+  height: 280px;
   position: absolute;
-  bottom: -170rem;
-  min-width: 800px;
-  min-height: 280px;
+  transform: translate(-50%, -50%);
+  top: 0;
+  left: 50%;
 }
 .log2 {
   color: #000000;
@@ -238,6 +249,16 @@
   font-weight: 200;
   width: max-content;
 }
+.stat:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  color: rgb(37, 103, 161);
+}
+.none {
+  text-decoration: none;
+  color: #fff;
+}
+
 .copyright {
   text-align: end;
   font-size: medium;
@@ -249,12 +270,25 @@
   border-radius: 50px;
   padding: 5px;
 }
+.iconS:hover {
+  cursor: pointer;
+  color: #fc52bf;
+  border-color: #fc52bf;
+}
 .group {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
   gap: 20px;
+}
+.hcb {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.5;
+  margin: 0;
+  color: #042831;
+  text-align: center;
 }
 @media (max-width: 768px) {
   .background {
@@ -403,8 +437,8 @@
     gap: 40px;
     position: absolute;
     bottom: -178rem;
-    min-width: 350px;
-    min-height: 176px;
+    max-width: 350px;
+    max-height: 176px;
   }
   .hc {
     font-size: 20px;

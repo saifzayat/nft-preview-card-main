@@ -72,29 +72,43 @@ function VICard() {
             </div>
           </div>
         </div>
+      </div>
+      <footer className={styles.footer}>
         <div className={styles.CCM}>
           <h1 className={styles.hcb}>Ready To Build Your Community?</h1>
           <button className={styles.btn2}>Get Started For Free</button>
         </div>
-      </div>
-      <footer className={styles.footer}>
         <img src={log} alt="logo" className={styles.log2} />
         <div className={styles.details}>
           <div className={styles.group}>
             <div className={styles.det}>
               <img src={locIcon} alt="location icon" className={styles.icon} />
-              <p className={styles}>
-                Lorem ipsum dolor sit amet, onsectetur adipiscing elit, sed do
-                iusmod tempor incididunt ut labore et olore magna aliqua
-              </p>
+              <a
+                href={`https://www.google.com/maps/search/?api=1&query=lorem+ipsum+dolor+sit+amet`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.none}
+              >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua
+              </a>
             </div>
             <div className={styles.det}>
               <img src={phoneIcon} alt="phone icon" className={styles.icon} />
-              <p className={styles}>+1-543-123-4567</p>
+              <a href="https://wa.me/+15431234567" className={styles.none}>
+                +1-543-123-4567
+              </a>
             </div>
             <div className={styles.det}>
               <img src={emailIcon} alt="email icon" className={styles.icon} />
-              <p className={styles}>example.com@G.com</p>
+              <a
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=example.com@G.com&su=Huddle%20-%20I%20want%20to%20know%20more&body=Hi%20there,%0D%0A%0D%0AI%20am%20interested%20in%20Huddle%20and%20I%20would%20like%20to%20know%20more.%0D%0A%0D%0APlease%20get%20in%20touch%20with%20me."
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.none}
+              >
+                example.com@G.com
+              </a>
             </div>
           </div>
           <div className={styles.group}>
