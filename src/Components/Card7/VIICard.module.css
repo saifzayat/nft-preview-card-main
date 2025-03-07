@@ -1,9 +1,175 @@
+.background {
+  position: absolute;
+  top: 0;
+  background-image: url("../../../assets/bg-desktop.svg");
+  width: 100%;
+  height: 100%; /* Full viewport height */
+  background-size: inherit; /* Ensure image covers the entire area */
+  background-position: unset; /* unset the image */
+  background-repeat: no-repeat; /*no repeating */
+  z-index: -1;
+}
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   min-height: 100vh;
-  background-color: #181824;
+  padding: 64px 80px 0px 80px;
+  background-color: #674bb0;
+  position: relative;
+  z-index: 0;
+  gap: 96px;
+}
+.header {
+  font-family: var(--poppins);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.thing {
+  max-width: 55%;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: start;
+  color: white;
+  gap: 25px;
+  width: 100%;
+  padding-top: 46px;
+  padding-right: 12px;
+  color: #ddd4f0;
+}
+.btn {
+  display: flex;
+  width: 200px;
+  height: 56px;
+  border-radius: 50px;
+  border: none;
+  background-color: #ffffff;
+  color: #674bb0;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  filter: drop-shadow(1px 2px 2px black);
+  font-size: 18px;
+  font-weight: 400;
+  font-family: "Poppins";
+}
+.btn:hover {
+  cursor: pointer;
+  background-color: #e980e7;
+  color: #ffffff;
+}
+.icons {
+  position: absolute;
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  bottom: 0;
+  right: 80px;
+  transform: translate(0px, -40px);
+}
+.iconS {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #fff;
+  border-radius: 50px;
+  padding: 10px;
+}
+.iconS:hover {
+  cursor: pointer;
+  color: #fc52bf;
+  border-color: #fc52bf;
+}
+.logo {
+  width: 200px;
+  filter: brightness(0) invert(1);
+}
+.contentContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 60px;
+}
+.h1 {
+  font-size: 38px;
+  font-weight: 600;
+  font-family: var(--Poppins);
+  line-height: normal;
   color: #fff;
+}
+.p {
+  font-size: 16px;
+  font-family: var(--Poppins);
+}
+@media (max-width: 768px) {
+  .background {
+    position: absolute;
+    top: 0;
+    background-image: url("../../../assets/bg-mobile.svg");
+    width: 100%;
+    height: 60vh; /* Full viewport height */
+    background-size: cover; /* Ensure image covers the entire area */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent repeating */
+    z-index: -1;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 36px 40px 40px 40px;
+    background-color: #674bb0;
+    position: relative;
+    z-index: 0;
+    gap: 66px;
+  }
+  .logo {
+    width: 120px;
+  }
+  .thing {
+    max-width: 102%;
+  }
+  .icons {
+    position: unset;
+    transform: unset;
+  }
+  .iconS {
+    width: 15px;
+    height: 15px;
+    padding: 6px;
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    width: 100%;
+    gap: 20px;
+    padding: 5px;
+  }
+  .contentContainer {
+    display: flex;
+    flex-direction: column;
+  }
+  .btn {
+    height: 40px;
+    font-size: 12px;
+  }
+  .h1 {
+    font-size: 24px;
+  }
+  .p {
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 300;
+  }
 }
