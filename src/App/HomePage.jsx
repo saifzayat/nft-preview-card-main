@@ -4,27 +4,36 @@ const NavigationPage = () => {
     <div>
       <h1>Navigation Page</h1>
       <nav>
-        <ul>
+        <ul style={{ fontSize: "2rem" }}>
           <li>
-            <Link to="/card1">Go to card 1</Link>
+            <Link to="/card1">Go to card I</Link>
           </li>
           <li>
-            <Link to="/card2">Go to card 2</Link>
+            <Link to="/card2">Go to card II</Link>
           </li>
           <li>
-            <Link to="/card3">Go to card 3</Link>
+            <Link to="/card3">Go to card III</Link>
           </li>
           <li>
-            <Link to="/card4">Go to card 4</Link>
+            <Link to="/card4">Go to card IV</Link>
           </li>
           <li>
-            <Link to="/card5">Go to card 5</Link>
+            <Link to="/card5">Go to card V</Link>
           </li>
           <li>
-            <Link to="/card6">Go to card 6</Link>
+            <Link to="/card6">Go to card VI</Link>
           </li>
           <li>
-            <Link to="/card7">Go to card 7</Link>
+            <Link to="/card7">Go to card VII</Link>
+          </li>
+          <li>
+            <Link to="/card8">Go to card VIII</Link>
+          </li>
+          <li>
+            <Link to="/card9">Go to card IX</Link>
+          </li>
+          <li>
+            <Link to="/card10">Go to card X</Link>
           </li>
         </ul>
       </nav>

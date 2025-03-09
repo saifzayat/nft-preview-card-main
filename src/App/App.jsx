@@ -8,6 +8,7 @@ import IVCard from "../Components/Card4/IVCard";
 import VCard from "../Components/Card5/VCard";
 import VICard from "../Components/Card6/VICard";
 import VIICard from "../Components/Card7/VIICard";
+import VIIICard from "../Components/Card8/VIIICard";
 function App() {
   return (
     <BrowserRouter>
@@ -20,6 +21,7 @@ function App() {
         <Route path="card5" element={<VCard />} />
         <Route path="card6" element={<VICard />} />
         <Route path="card7" element={<VIICard />} />
+        <Route path="card8" element={<VIIICard />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
     </BrowserRouter>
