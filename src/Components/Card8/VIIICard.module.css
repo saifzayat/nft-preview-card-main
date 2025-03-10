@@ -156,7 +156,7 @@
 
 /* تخصيص الخلفية العلوية */
 .backgroundTop {
-  background-position: bottom;
+  background-position-y: bottom;
   background-image: url("../../../assets/bg-section-top-desktop-1.svg");
 }
 
