@@ -396,9 +396,12 @@
   .brDesktop {
     display: none;
   }
+  .FGroup {
+    flex-direction: column;
+  }
   .footer {
     flex-direction: column;
-    padding: 120px 50px 50px 40px;
+    padding: 250px 50px 50px 40px;
   }
   .group {
     display: flex;
