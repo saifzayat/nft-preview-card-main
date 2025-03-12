@@ -1,5 +1,5 @@
 import styles from "./IXCard.module.css";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import logo from "../../../assets/logo-1.svg";
 import pic1 from "../../../assets/illustration-1.svg";
 import pic2 from "../../../assets/illustration-2.svg";

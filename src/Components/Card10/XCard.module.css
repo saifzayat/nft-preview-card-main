@@ -1,0 +1,526 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+:root {
+  --Raleway: "Raleway", sans-serif;
+  --gradient1: linear-gradient(135deg, hsl(176, 68%, 64%), hsl(198, 60%, 50%));
+}
+.brDesktop {
+  display: block;
+}
+.brMobile {
+  display: none;
+}
+.container {
+  display: flex;
+  padding: 75px 80px 130px 80px;
+
+  flex-direction: column;
+  align-items: center;
+  gap: 77px;
+  background-color: #1c2230;
+  font-family: var(--Raleway);
+  color: white;
+  z-index: 1;
+}
+
+.header {
+  font-family: var(--Raleway);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.logo {
+  width: 175px;
+  height: 50px;
+  filter: brightness(0) invert(1);
+}
+.ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 58px;
+  list-style-type: none;
+}
+.li {
+  cursor: pointer;
+  font-size: 16px;
+  color: white;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 35px;
+  width: 720px;
+  z-index: 1;
+}
+.h1 {
+  font-size: 41px;
+  font-weight: 600;
+  line-height: 1.4;
+  text-align: center;
+}
+.p {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.4;
+  text-align: center;
+  padding: 0px 55px;
+}
+.img {
+  max-width: 100%;
+}
+.btn {
+  display: flex;
+  width: 280px;
+  height: 55px;
+  border-radius: 50px;
+  border: none;
+  background: var(--gradient1);
+  color: #ffffff;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 500;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  cursor: pointer;
+}
+.backgroundCommon {
+  background-size: cover; /* تمتد بعرض الشاشة مع الحفاظ على التناسب */
+  background-repeat: no-repeat;
+  width: 100vw; /* يمتد على كامل عرض الشاشة */
+  height: 32vw; /* يمتد بنسبة من ارتفاع الشاشة */
+  position: relative;
+  z-index: 1;
+}
+.test {
+  position: relative;
+  background: #1c2230;
+}
+.test:before {
+  content: "";
+  position: absolute;
+  bottom: -135px;
+  left: 0;
+  transform: translateX(-50%);
+  width: 100vw;
+  height: 32vw;
+  background-image: url("../../../assets/bg-curvy-desktop.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+/* تخصيص الخلفية العلوية */
+.backgroundTop {
+  background-position-y: bottom;
+  background-image: url("../../../assets/bg-curvy-desktop.svg");
+}
+.grad {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+  color: #ffffff;
+  align-items: center;
+  gap: 85px;
+  padding: 0px 275px;
+  text-align: center;
+}
+.grad1 {
+  gap: 85px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  font-size: 14px;
+}
+.grad2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.grad3 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 25px;
+}
+.linkImage {
+  width: 20px;
+  height: 20px;
+}
+.CCC {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  padding: 58px;
+  font-size: 16px;
+  background-color: #181f2a;
+  color: #ffffff;
+  text-align: left;
+}
+.link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+  cursor: pointer;
+  text-decoration: none;
+  color: #65dfdd;
+}
+
+.link::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #65dfdd; /* لون الخط */
+}
+.cardGroup {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 200px 58px;
+  color: #ffffff;
+}
+.quotes {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-30px, -30px);
+  z-index: -1;
+}
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  gap: 10px;
+  width: 360px;
+  height: 200px;
+  background-color: #21293c;
+  border-radius: 10px;
+  z-index: 1;
+  filter: drop-shadow(0px 10px 10px rgba(0, 0, 0, 0.25));
+  padding: 20px;
+  font-size: 14px;
+}
+.ps {
+  font-size: 13px;
+  font-weight: 500;
+}
+.avatar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.detailsCard {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.name {
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1.4;
+  text-align: left;
+}
+.title {
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 1.4;
+  text-align: left;
+}
+.avatarImg {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.flowCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #1c2230;
+  border-radius: 16px;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
+  padding: 34px;
+  gap: 20px;
+  width: 850px;
+  height: 275px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  color: #ffffff;
+  z-index: 1;
+}
+
+.flowCard h1 {
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 1.4;
+  text-align: center;
+}
+.flowCard p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  text-align: center;
+  padding: 0px 70px;
+}
+.inputGroup {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 8px 10px;
+  border-radius: 10px;
+}
+.input1 {
+  display: flex;
+  border-radius: 50px;
+  width: 480px;
+  height: 50px;
+  font-size: 20px;
+  padding-left: 20px;
+  background-color: #ffffff;
+}
+.btn1 {
+  display: flex;
+  width: 200px;
+  height: 45px;
+  border-radius: 50px;
+  border: none;
+  background: var(--gradient1);
+  color: #ffffff;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 500;
+}
+.footer {
+  display: flex;
+  gap: 28px;
+  background-color: #0c1524;
+  color: #ffffff;
+  flex-direction: column;
+  padding: 150px 50px 50px 50px;
+  font-family: var(--Open-Sans);
+  font-size: 10px;
+  font-weight: 200;
+  position: relative;
+}
+.details {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 115px;
+}
+.stat {
+  font-weight: 200;
+  width: max-content;
+}
+.stat:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  color: rgb(37, 103, 161);
+}
+.group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 20px;
+}
+.det {
+  display: flex;
+  flex-direction: row;
+  gap: 26px;
+  font-size: 16px;
+}
+.none {
+  text-decoration: none;
+  color: #fff;
+}
+.icon {
+  width: 20px;
+  height: 20px;
+}
+.icons {
+  display: flex;
+  gap: 28px;
+  align-items: center;
+  justify-content: center;
+}
+.iconS {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #fff;
+  border-radius: 50px;
+  padding: 5px;
+}
+.iconS:hover {
+  cursor: pointer;
+  color: #6a98ff;
+  border-color: #6a98ff;
+}
+.FGroup {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 20px;
+}
+@media (max-width: 768px) {
+  .brDesktop {
+    display: none;
+  }
+  .footer {
+    flex-direction: column;
+    padding: 120px 50px 50px 40px;
+  }
+  .group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 20px;
+  }
+  .stat {
+    font-weight: 200;
+  }
+
+  .details {
+    display: flex;
+    flex-direction: column;
+    align-items: unset;
+    justify-content: center;
+    gap: 30px;
+  }
+  .flowCard {
+    width: 330px;
+    height: 350px;
+  }
+  .flowCard h1 {
+    font-size: 22px;
+  }
+  .flowCard p {
+    font-size: 14px;
+    padding: 0px;
+  }
+  .inputGroup {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .input1,
+  .btn1 {
+    width: 280px;
+    height: 50px;
+  }
+  .cardGroup {
+    flex-direction: column;
+    padding: 200px 0px;
+  }
+  .card {
+    width: 275px;
+    height: 160px;
+    font-size: 12px;
+  }
+  .quotes {
+    left: 10px;
+    top: 10px;
+  }
+  .CCC {
+    align-items: center;
+    padding: 30px;
+    flex-direction: column;
+  }
+  .grad {
+    padding: 40px;
+  }
+  .grad1 {
+    flex-direction: column;
+  }
+  .brMobile {
+    display: block;
+  }
+  .hero::after {
+    content: "";
+    position: absolute;
+    top: 58%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: #181f2a;
+  }
+  .hero::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top: 0rem;
+    width: 100%;
+    height: 100%;
+    background: url("../../../assets/bg-curvy-mobile.svg") no-repeat center
+      center;
+    background-size: contain;
+  }
+  .test:before {
+    display: none;
+  }
+  .container {
+    padding: 24px 20px;
+    gap: 47px;
+  }
+  .logo {
+    width: 80px;
+    height: 25px;
+  }
+  .content {
+    width: 100%;
+    gap: 30px;
+  }
+  .ul {
+    gap: 20px;
+  }
+  .li {
+    font-size: 12px;
+  }
+  .img {
+    max-width: 91%;
+  }
+  .h1 {
+    font-size: 24px;
+  }
+  .p {
+    font-size: 14px;
+    padding: 0px 20px;
+  }
+  .btn {
+    width: 240px;
+    height: 45px;
+    font-size: 14px;
+  }
+}
