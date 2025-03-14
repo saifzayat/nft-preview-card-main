@@ -36,6 +36,9 @@ const NavigationPage = () => {
             <Link to="/card10">Go to card X</Link>
           </li>
           <li>
+            <Link to="/card11">Go to card XI</Link>
+          </li>
+          <li>
             <Link to="/test">Go to Test</Link>
           </li>
         </ul>

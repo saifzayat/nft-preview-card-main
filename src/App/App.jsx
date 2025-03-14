@@ -11,6 +11,7 @@ import VIICard from "../Components/Card7/VIICard";
 import VIIICard from "../Components/Card8/VIIICard";
 import IXCard from "../Components/Card9/IXCard";
 import XCard from "../Components/Card10/XCard";
+import XICard from "../Components/Card11/XICard";
 import Test from "../Components/Test";
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
         <Route path="card8" element={<VIIICard />} />
         <Route path="card9" element={<IXCard />} />
         <Route path="card10" element={<XCard />} />
+        <Route path="card11" element={<XICard />} />
         <Route path="test" element={<Test />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
