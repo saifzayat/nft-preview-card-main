@@ -16,7 +16,11 @@ import { faFacebook } from "@fortawesome/free-brands-svg-icons";
 import { faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 function Button({ color, text }) {
-  return <button style={{ backgroundColor: color }}>{text}</button>;
+  return (
+    <button className={styles.button} style={{ backgroundColor: color }}>
+      {text}
+    </button>
+  );
 }
 function Titles({ title, description }) {
   return (
