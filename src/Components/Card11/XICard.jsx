@@ -15,9 +15,15 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebook } from "@fortawesome/free-brands-svg-icons";
 import { faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
+import { useNavigate } from "react-router-dom";
 function Button({ color, text }) {
+  const navigation = useNavigate();
   return (
-    <button className={styles.button} style={{ backgroundColor: color }}>
+    <button
+      className={styles.button}
+      style={{ backgroundColor: color }}
+      onClick={() => navigation("*")}
+    >
       {text}
     </button>
   );
@@ -142,15 +148,25 @@ function XICard() {
         <img src={logo} alt="logo" className={styles.logo2} />
         <div style={{ color: "black" }} className={styles.footerContainer}>
           <div className={styles.details}>
-            <p className={styles.hover}>FAQs</p>
-            <p className={styles.hover}>Contact Us</p>
+            <a href="*" className={styles.hover}>
+              FAQs
+            </a>
+            <a href="*" className={styles.hover}>
+              Contact Us
+            </a>
           </div>
           <div className={styles.details}>
-            <p className={styles.hover}>Privacy Policy</p>
-            <p className={styles.hover}>Press kit</p>
+            <a href="*" className={styles.hover}>
+              Privacy Policy
+            </a>
+            <a href="*" className={styles.hover}>
+              Press kit
+            </a>
           </div>
           <div className={styles.details}>
-            <p className={styles.hover}>Install Guide</p>
+            <a href="*" className={styles.hover}>
+              Install Guide
+            </a>
           </div>
         </div>
         <div className={styles.icons}>

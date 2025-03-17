@@ -32,107 +32,113 @@ function VIIICard() {
     }
   };
   return (
-    <div className={styles.container}>
-      <header className={styles.header}>
-        <nav className={styles.nav}>
-          <img src={log} alt="logo" className={styles.logo} />
-          <button className={styles.btn}>Try It Free</button>
-        </nav>
-      </header>
-      <main className={styles.main}>
-        <div className={styles.content}>
-          <h1 className={styles.h1}>Build The Community Your Fans Will Love</h1>
-          <p className={styles.p}>
-            Huddle re-imagines the way we build communities. You have a voice,
-            but so does your audience. Create connections with your users as you
-            engage in genuine discussion.
-          </p>
-        </div>
-        <button className={styles.btn1}>Get Started For Free</button>
-        <img src={thing} alt="thing" className={styles.thing} />
-        <div className={styles.states}>
-          <div style={{ textAlign: "center" }}>
-            <img
-              src={iconPeople}
-              alt="iconPeople"
-              className={styles.iconPeople}
-            />
-            <h1 className={styles.state}>1.4K+</h1>
-            <p className={styles.s}>Communities Formed </p>
-          </div>
-          <div style={{ textAlign: "center" }}>
-            <img
-              src={iconMassage}
-              alt="iconMassage"
-              className={styles.iconMassage}
-            />
-            <h1 className={styles.state}>2.7m+</h1>
-            <p className={styles.s}>Messages sent</p>
-          </div>
-        </div>
-      </main>
-      <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          flexDirection: "column",
-        }}
-      >
-        <div className={`${styles.backgroundCommon} ${styles.backgroundTop}`} />
-        <div className={`${styles.CC} ${styles.CCL}`}>
-          <img src={pic1} alt="pic1" className={styles.pic} />
-          <div className={styles.CCC}>
-            <h1 className={styles.hc}>Grow Together</h1>
-            <p className={styles.pc}>
-              Generate meaningful discussions with your audience and build a
-              strong, loyal community. Think of the insightful conversations you
-              miss out on with a feedback form.
+    <div>
+      <div className={styles.container}>
+        <header className={styles.header}>
+          <nav className={styles.nav}>
+            <img src={log} alt="logo" className={styles.logo} />
+            <button className={styles.btn}>Try It Free</button>
+          </nav>
+        </header>
+        <main className={styles.main}>
+          <div className={styles.content}>
+            <h1 className={styles.h1}>
+              Build The Community Your Fans Will Love
+            </h1>
+            <p className={styles.p}>
+              Huddle re-imagines the way we build communities. You have a voice,
+              but so does your audience. Create connections with your users as
+              you engage in genuine discussion.
             </p>
           </div>
-        </div>
-        <div
-          className={`${styles.backgroundCommon} ${styles.backgroundBottom}`}
-        />
-        <div className={`${styles.CC} ${styles.CCR}`}>
-          <img src={pic2} alt="pic2" className={styles.pic} />
-          <div className={styles.CCC}>
-            <h1 className={styles.hc}>Flowing Conversations</h1>
-            <p className={styles.pc}>
-              You wouldn&apos;t paginate a conversation in real life, so why do
-              it online? Our threads have just-in-time loading for a more
-              natural flow.
-            </p>
+          <button className={styles.btn1}>Get Started For Free</button>
+          <img src={thing} alt="thing" className={styles.thing} />
+          <div className={styles.states}>
+            <div style={{ textAlign: "center" }}>
+              <img
+                src={iconPeople}
+                alt="iconPeople"
+                className={styles.iconPeople}
+              />
+              <h1 className={styles.state}>1.4K+</h1>
+              <p className={styles.s}>Communities Formed </p>
+            </div>
+            <div style={{ textAlign: "center" }}>
+              <img
+                src={iconMassage}
+                alt="iconMassage"
+                className={styles.iconMassage}
+              />
+              <h1 className={styles.state}>2.7m+</h1>
+              <p className={styles.s}>Messages sent</p>
+            </div>
           </div>
-        </div>
-        <div
-          className={`${styles.backgroundCommon} ${styles.backgroundTop2}`}
-        />
-        <div className={`${styles.CC} ${styles.CCL}`}>
-          <img src={pic3} alt="pic3" className={styles.pic} />
-          <div className={styles.CCC}>
-            <h1 className={styles.hc}>Your Users</h1>
-            <p className={styles.pc}>
-              It takes no time at all to integrate Huddle with your app&apos;s
-              authentication solution, This means, once signed in to your app,
-              your users can start chatting immediately.
-            </p>
-          </div>
-        </div>
-        <div
-          className={`${styles.backgroundCommon} ${styles.backgroundBottom2}`}
-        />
+        </main>
         <div
           style={{
             display: "flex",
-            justifyContent: "center",
             alignItems: "center",
             flexDirection: "column",
-            gap: "35px",
-            padding: "100px 0px ",
           }}
         >
-          <h1 className={styles.h1}>Ready To Build Your Community?</h1>
-          <button className={styles.btn2}>Get Started For Free</button>
+          <div
+            className={`${styles.backgroundCommon} ${styles.backgroundTop}`}
+          />
+          <div className={`${styles.CC} ${styles.CCL}`}>
+            <img src={pic1} alt="pic1" className={styles.pic} />
+            <div className={styles.CCC}>
+              <h1 className={styles.hc}>Grow Together</h1>
+              <p className={styles.pc}>
+                Generate meaningful discussions with your audience and build a
+                strong, loyal community. Think of the insightful conversations
+                you miss out on with a feedback form.
+              </p>
+            </div>
+          </div>
+          <div
+            className={`${styles.backgroundCommon} ${styles.backgroundBottom}`}
+          />
+          <div className={`${styles.CC} ${styles.CCR}`}>
+            <img src={pic2} alt="pic2" className={styles.pic} />
+            <div className={styles.CCC}>
+              <h1 className={styles.hc}>Flowing Conversations</h1>
+              <p className={styles.pc}>
+                You wouldn&apos;t paginate a conversation in real life, so why
+                do it online? Our threads have just-in-time loading for a more
+                natural flow.
+              </p>
+            </div>
+          </div>
+          <div
+            className={`${styles.backgroundCommon} ${styles.backgroundTop2}`}
+          />
+          <div className={`${styles.CC} ${styles.CCL}`}>
+            <img src={pic3} alt="pic3" className={styles.pic} />
+            <div className={styles.CCC}>
+              <h1 className={styles.hc}>Your Users</h1>
+              <p className={styles.pc}>
+                It takes no time at all to integrate Huddle with your app&apos;s
+                authentication solution, This means, once signed in to your app,
+                your users can start chatting immediately.
+              </p>
+            </div>
+          </div>
+          <div
+            className={`${styles.backgroundCommon} ${styles.backgroundBottom2}`}
+          />
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              flexDirection: "column",
+              gap: "35px",
+              padding: "100px 0px ",
+            }}
+          >
+            <h1 className={styles.h1}>Ready To Build Your Community?</h1>
+            <button className={styles.btn2}>Get Started For Free</button>
+          </div>
         </div>
       </div>
       <footer>

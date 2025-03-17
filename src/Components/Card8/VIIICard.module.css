@@ -1,6 +1,6 @@
 .container {
   display: flex;
-  padding: 80px 80px 0px 80px;
+  padding-bottom: 80px;
   flex-direction: column;
   align-items: center;
   font-family: var(--Poppins);
@@ -17,6 +17,7 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  padding: 80px 80px;
 }
 .btn {
   display: flex;
@@ -147,9 +148,9 @@
   background-color: #fff;
 }
 .backgroundCommon {
-  background-size: 100% auto; /* تمتد بعرض الشاشة مع الحفاظ على التناسب */
+  background-size: contain; /* تمتد بعرض الشاشة مع الحفاظ على التناسب */
   background-repeat: no-repeat;
-  width: 100vw; /* يمتد على كامل عرض الشاشة */
+  width: 100%; /* يمتد على كامل عرض الشاشة */
   height: 25vh; /* يمتد بنسبة من ارتفاع الشاشة */
   max-height: 200px; /* الحد الأقصى للارتفاع لمنع التشوه */
 }
@@ -193,7 +194,7 @@
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 .footerground {
-  transform: translateY(10px);
+  transform: translateY(5px);
   background-position-y: bottom;
   background-image: url("../../../assets/bg-footer-top-desktop.svg");
 }
@@ -306,13 +307,16 @@
 
 @media (max-width: 768px) {
   .container {
-    padding: 22px 22px 0px 22px;
+    padding-bottom: 22px;
   }
   .handleSubmit {
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
     justify-content: space-between;
+  }
+  .nav {
+    padding: 22px 22px;
   }
   .logo {
     width: 100px;

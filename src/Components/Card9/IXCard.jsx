@@ -37,9 +37,15 @@ function IXCard() {
           <nav className={styles.nav}>
             <img src={logo} alt="logo" className={styles.logo} />
             <ul className={styles.ul}>
-              <li className={styles.li}>Features</li>
-              <li className={styles.li}>Team</li>
-              <li className={styles.li}>Sign In</li>
+              <li className={styles.li}>
+                <a href="*">Features </a>
+              </li>
+              <li className={styles.li}>
+                <a href="*">Team </a>
+              </li>
+              <li className={styles.li}>
+                <a href="*">Sign In </a>
+              </li>
             </ul>
           </nav>
         </header>
@@ -125,12 +131,12 @@ function IXCard() {
       <div className={`${styles.container} ${styles.between}`}>
         <div className={styles.content} style={{ paddingTop: "0px" }}>
           <h1
-            className={styles.h1}
+            className={styles.h1b}
             style={{ color: "white", fontWeight: "400" }}
           >
             Get early access today
           </h1>
-          <p className={styles.p} style={{ color: "white" }}>
+          <p className={styles.pb} style={{ color: "white" }}>
             It only takes a minute to sign up and our free starter tier is
             extremely generous. If you have any questions, our support team
             would be happy to help you.
@@ -181,20 +187,40 @@ function IXCard() {
             </div>
           </div>
           <div className={styles.group}>
-            <h1 className={styles.stat}>About Us</h1>
-            <h1 className={styles.stat}>Jobs</h1>
-            <h1 className={styles.stat}>Press</h1>
-            <h1 className={styles.stat}>Blog</h1>
+            <a href="*" className={styles.stat}>
+              About Us
+            </a>
+            <a href="*" className={styles.stat}>
+              Jobs
+            </a>
+            <a href="*" className={styles.stat}>
+              Press
+            </a>
+            <a href="*" className={styles.stat}>
+              Blog
+            </a>
           </div>
           <div className={styles.group}>
-            <h1 className={styles.stat}>Contact Us</h1>
-            <h1 className={styles.stat}> Terms</h1>
-            <h1 className={styles.stat}>Privacy</h1>
+            <a href="*" className={styles.stat}>
+              Contact Us
+            </a>
+            <a href="*" className={styles.stat}>
+              Terms
+            </a>
+            <a href="*" className={styles.stat}>
+              Privacy
+            </a>
           </div>
           <div className={styles.icons}>
-            <FontAwesomeIcon className={styles.iconS} icon={faFacebook} />
-            <FontAwesomeIcon className={styles.iconS} icon={faTwitter} />
-            <FontAwesomeIcon className={styles.iconS} icon={faInstagram} />
+            <a href="*">
+              <FontAwesomeIcon className={styles.iconS} icon={faFacebook} />
+            </a>
+            <a href="*">
+              <FontAwesomeIcon className={styles.iconS} icon={faTwitter} />
+            </a>
+            <a href="*">
+              <FontAwesomeIcon className={styles.iconS} icon={faInstagram} />
+            </a>
           </div>
         </div>
       </footer>
