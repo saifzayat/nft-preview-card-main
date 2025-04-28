@@ -1,0 +1,26 @@
+.main {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+  padding: 30px;
+  filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.2));
+}
+.card {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+}
+
+.img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+@media screen and (max-width: 768px) {
+  .main {
+    grid-template-columns: none;
+    gap: 20px;
+  }
+}
