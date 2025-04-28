@@ -1,45 +1,30 @@
+import styles from "./HomePage.module.css";
 import { Link } from "react-router-dom";
+
 const NavigationPage = () => {
   return (
-    <div>
-      <h1>Navigation Page</h1>
-      <nav>
-        <ul style={{ fontSize: "2rem" }}>
-          <li>
-            <Link to="/card1">Go to card I</Link>
-          </li>
-          <li>
-            <Link to="/card2">Go to card II</Link>
-          </li>
-          <li>
-            <Link to="/card3">Go to card III</Link>
-          </li>
-          <li>
-            <Link to="/card4">Go to card IV</Link>
-          </li>
-          <li>
-            <Link to="/card5">Go to card V</Link>
-          </li>
-          <li>
-            <Link to="/card6">Go to card VI</Link>
-          </li>
-          <li>
-            <Link to="/card7">Go to card VII</Link>
-          </li>
-          <li>
-            <Link to="/card8">Go to card VIII</Link>
-          </li>
-          <li>
-            <Link to="/card9">Go to card IX</Link>
-          </li>
-          <li>
-            <Link to="/card10">Go to card X</Link>
-          </li>
-          <li>
-            <Link to="/card11">Go to card XI</Link>
-          </li>
-        </ul>
-      </nav>
+    <div style={{ backgroundColor: "#fff" }}>
+      <h1 style={{ textAlign: "center", marginTop: "20px" }}>
+        Some of Challenge in front-end mentor
+      </h1>
+      <div className={styles.main}>
+        {Array.from({ length: 11 }, (_, index) => (
+          <Link to={`/card${index + 1}`} key={index} className={styles.card}>
+            <div className={styles.content}>
+              <img
+                src={`https://api.apiflash.com/v1/urltoimage?access_key=c07c2e4efcf14bfdbd254e45d9aa7ffc&url=https://nft-preview-card-main-six.vercel.app/card${
+                  index + 1
+                }`}
+                alt={`Card ${index + 1}`}
+                className={styles.img}
+              />
+              <p style={{ marginTop: "10px", fontSize: "1.6rem" }}>
+                Go to Challenge {index + 1}
+              </p>
+            </div>
+          </Link>
+        ))}
+      </div>
     </div>
   );
 };
