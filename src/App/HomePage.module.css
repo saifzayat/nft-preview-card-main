@@ -18,9 +18,15 @@
   object-fit: cover;
   border-radius: 8px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 500px) {
   .main {
     grid-template-columns: none;
     gap: 20px;
+  }
+}
+@media screen and (min-width: 500px) and (max-width: 1024px) {
+  .main {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
   }
 }
